@@ -11,19 +11,28 @@ const ListItem = props => {
   const title = props?.title ? props.title : {icon: null, text: ''};
   const subTitles = props?.subTitles ? props.subTitles : [];
 
+  // const numberOfLines = props?.ItemsAdjusts ?  props.ItemsAdjusts : {};
+  const titleTextProps = props?.title?.textProps ? props?.title?.textProps : {};
+
+  const teste = {item: {textIndex: 2, textProps: {numberOfines: 1}}};
+
   return (
     <ListItemContainer>
       <Avatar {...source} />
-      <ContentView>
+      <ContentView bottomLine={props?.bottomLine}>
         <TextView>
           {title?.icon && (
             <IconView>
               <Icon name={title.icon} size={12} color="#444649" />
             </IconView>
           )}
-          <TextDefault fontSize={15}>{title.text}</TextDefault>
+          <TextDefault fontSize={15} {...titleTextProps}>
+            {title.text}
+          </TextDefault>
         </TextView>
         {subTitles.map((item, index) => {
+          const textProps =
+            item?.textIndex == index && item?.textProps ? item?.textProps : {};
           return (
             <TextView key={index}>
               {item?.icon && (
@@ -31,7 +40,7 @@ const ListItem = props => {
                   <Icon name={item.icon} size={12} color="#444649" />
                 </IconView>
               )}
-              <TextDefault> {item.text}</TextDefault>
+              <TextDefault {...textProps}> {item.text}</TextDefault>
             </TextView>
           );
         })}

@@ -25,6 +25,7 @@ const Individualslist = props => {
                   title={item.name}
                   source={item.avatarImage}
                   subTitles={[{...item.className}, {...item.timeInfo}]}
+                  bottomLine
                 />
               );
             }}
