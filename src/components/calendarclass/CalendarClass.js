@@ -1,22 +1,21 @@
 import React from 'react';
 import SectionTitle from '../sectiontitle/SectionTitle';
-import {CalendarClassContainer, DatesView, SubTitleView} from './styles';
+import {
+  AppIncludedWrapper,
+  AppsListItemView,
+  AppsListWraper,
+  CalendarClassContainer,
+  DatesView,
+  SubTitleView,
+} from './styles';
 import {TextDefault} from '../../styles/UIComponents';
 import DateShow from './DateShow';
+import AppsIncludedBanner from './AppsIncludedBanner';
+import ListItem from '../listitem/ListItem';
+import {mockData} from '../../storage/mockData';
 
 const CalendarClass = () => {
   const date = new Date();
-  // console.log(date.getDate());
-  // const dd = String(today.getDate()).padStart(2, '0');
-  // const mm = String(today.getMonth() + 1).padStart(2, '0');
-
-  // const dayName = today
-  //   .toLocaleDateString('pt-br', {weekday: 'short'})
-  //   .split('.')[0];
-  // const monthName = today
-  //   .toLocaleDateString('pt-br', {month: 'short'})
-  //   .split('.')[0];
-  // const dateString = dayName + '-' + dd + '-' + monthName;
 
   return (
     <CalendarClassContainer>
@@ -43,6 +42,23 @@ const CalendarClass = () => {
           return <DateShow key={index} date={dateString} />;
         })}
       </DatesView>
+      <AppIncludedWrapper>
+        <AppsIncludedBanner />
+      </AppIncludedWrapper>
+
+      <AppsListWraper horizontal showsHorizontalScrollIndicator={false}>
+        {mockData.appsIncluded.map((item, index) => {
+          return (
+            <AppsListItemView key={index}>
+              <ListItem
+                source={item.logoUri}
+                title={item.enterpriseName}
+                subTitles={[{...item.subtitleText}]}
+              />
+            </AppsListItemView>
+          );
+        })}
+      </AppsListWraper>
     </CalendarClassContainer>
   );
 };
