@@ -5,6 +5,7 @@ import Checkinfosection from '../components/checksinfosection/Checkinfosection';
 import NextClassSection from '../components/nextclass/NextClassSection';
 import {mockData} from '../storage/mockData';
 import CalendarClass from '../components/calendarclass/CalendarClass';
+import FavoriteSection from '../components/favoritesection/FavoriteSection';
 
 const Home = props => {
   const elements = [
@@ -12,6 +13,7 @@ const Home = props => {
     () => <Checkinfosection />,
     () => <NextClassSection />,
     () => <CalendarClass />,
+    () => <FavoriteSection />,
   ];
 
   return (

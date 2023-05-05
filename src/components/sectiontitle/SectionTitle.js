@@ -5,7 +5,9 @@ import {TextDefault} from '../../styles/UIComponents';
 const SectionTitle = props => {
   return (
     <TitleView>
-      <TextDefault fontSize={13}>{props.title || 'Título'}</TextDefault>
+      <TextDefault fontSize={13}>
+        {props.title.toUpperCase() || 'TÍTULO'}
+      </TextDefault>
     </TitleView>
   );
 };
