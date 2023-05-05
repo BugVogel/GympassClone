@@ -1,3 +1,4 @@
+const textProps = {numberOfLines: 1, ellipsizeMode: 'tail'};
 export const mockData = {
   carouselItems: [
     {
@@ -79,6 +80,7 @@ export const mockData = {
       id: 0,
       enterpriseName: {text: 'Trainiac by Gympass'},
       subtitleText: {
+        textProps,
         text: 'Alcance seus objetivos Lorem Ipsum Lorem Ipsum Lorem Ipsum',
       },
       logoUri:
@@ -88,6 +90,7 @@ export const mockData = {
       id: 1,
       enterpriseName: {text: 'Headspace'},
       subtitleText: {
+        textProps,
         text: 'Meditar e dormir bem Lorem Ipsum Lorem Ipsum Lorem Ipsum',
       },
       logoUri:
@@ -97,6 +100,7 @@ export const mockData = {
       id: 2,
       enterpriseName: {text: 'MyFitnessPal'},
       subtitleText: {
+        textProps,
         text: 'Diário de Alimentação Lorem Ipsum Lorem Ipsum Lorem Ipsum',
       },
       logoUri:
@@ -106,6 +110,7 @@ export const mockData = {
       id: 3,
       enterpriseName: {text: 'Strava'},
       subtitleText: {
+        textProps,
         text: 'O aplicativo número 1 Lorem Ipsum Lorem Ipsum Lorem Ipsum',
       },
       logoUri: 'https://icon-library.com/images/strava-icon/strava-icon-10.jpg',
@@ -114,6 +119,7 @@ export const mockData = {
       id: 4,
       enterpriseName: {text: 'Tecnonutri'},
       subtitleText: {
+        textProps,
         text: 'Perder peso de forma Lorem Ipsum Lorem Ipsum Lorem Ipsum',
       },
       logoUri:
@@ -123,6 +129,7 @@ export const mockData = {
       id: 5,
       enterpriseName: {text: 'Btfit'},
       subtitleText: {
+        textProps,
         text: 'Rotina online de treinamento Lorem Ipsum Lorem Ipsum Lorem Ipsum',
       },
       logoUri:

@@ -14,8 +14,6 @@ const ListItem = props => {
   // const numberOfLines = props?.ItemsAdjusts ?  props.ItemsAdjusts : {};
   const titleTextProps = props?.title?.textProps ? props?.title?.textProps : {};
 
-  const teste = {item: {textIndex: 2, textProps: {numberOfines: 1}}};
-
   return (
     <ListItemContainer>
       <Avatar {...source} />
@@ -31,8 +29,8 @@ const ListItem = props => {
           </TextDefault>
         </TextView>
         {subTitles.map((item, index) => {
-          const textProps =
-            item?.textIndex == index && item?.textProps ? item?.textProps : {};
+          const textProps = item?.textProps ? item?.textProps : {};
+
           return (
             <TextView key={index}>
               {item?.icon && (
