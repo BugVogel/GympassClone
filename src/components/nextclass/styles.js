@@ -38,3 +38,8 @@ export const ButtonView = styled.View`
   align-items: center;
   padding: 20px;
 `;
+
+export const RenderItemView = styled.View`
+  flex: 1;
+  margin-bottom: 20px;
+`;

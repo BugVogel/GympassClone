@@ -1,6 +1,6 @@
 import React from 'react';
 import {FlatList} from 'react-native';
-import {ClassListContainer, ListView} from './styles';
+import {ClassListContainer, ListView, RenderItemView} from './styles';
 import ListItem from '../listitem/ListItem';
 import ListTitle from './ListTitle';
 import {mockData} from '../../storage/mockData';
@@ -20,13 +20,15 @@ const Individualslist = props => {
               //   const timeInfo = item.date + ' - ' + item.duration;
               //   console.log(index);
               return (
-                <ListItem
-                  key={index}
-                  title={item.name}
-                  source={item.avatarImage}
-                  subTitles={[{...item.className}, {...item.timeInfo}]}
-                  bottomLine
-                />
+                <RenderItemView>
+                  <ListItem
+                    key={index}
+                    title={item.name}
+                    source={item.avatarImage}
+                    subTitles={[{...item.className}, {...item.timeInfo}]}
+                    bottomLine
+                  />
+                </RenderItemView>
               );
             }}
           />

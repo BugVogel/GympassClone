@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const ListItemContainer = styled.View`
   flex: 1;
   flex-direction: row;
-  margin-bottom: 20px;
 `;
 
 export const ContentView = styled.View`
